@@ -4,3 +4,4 @@ datascienceVM workshop setup
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
+NOTE: THIS IS A COPY FROM https://github.com/Azure/DataScienceVM/blob/master/Tutorials/MLADS-fall-2018/setup/configure_vm.sh

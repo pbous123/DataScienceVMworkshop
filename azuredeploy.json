@@ -66,7 +66,7 @@
         "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', variables('nsgName'))]",   
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
-        "fileUris": "https://raw.githubusercontent.com/Azure/DataScienceVM/master/Tutorials/MLADS-fall-2018/setup/configure_vm.sh",
+        "fileUris": "https://raw.githubusercontent.com/pbous123/DataScienceVMworkshop/master/configure_vm.sh",
         "commandToExecute": "bash configure_vm.sh"
     },
     "resources": [

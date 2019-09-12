@@ -151,7 +151,7 @@
                 "count": "[variables('numberOfInstances')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Network/publicIPAddresses/', concat(variables('publicIPAddressName'),copyindex()))]",
+                "[concat('Microsoft.Network/publicIPAddresses/', concat(variables('publicIPAddressName'), copyindex()))]",
                 "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
             ],
             "properties": {
@@ -185,7 +185,7 @@
                 "scope": "[resourceGroup().id]"
           },
           "dependsOn": [
-            "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'),copyindex())]"
+            "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'), copyindex())]"
           ]        
         },	    
         {
@@ -258,7 +258,7 @@
 			  "apiVersion": "2018-06-01",
 			  "location": "[variables('location')]",
 			  "dependsOn": [
-				"[concat('Microsoft.Compute/virtualMachines/', variables('vmName'),copyindex())]"
+				"[concat('Microsoft.Compute/virtualMachines/', variables('vmName'), copyindex())]"
 			  ],
 			  "properties": {
 				"publisher": "Microsoft.OSTCExtensions",

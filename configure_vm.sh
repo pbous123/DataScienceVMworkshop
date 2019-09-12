@@ -3,6 +3,9 @@
 source /etc/profile
 conda activate py36
 
+pip install azureml-core
+pip install azureml-accel-models[cpu] --user
+
 # enable the widgets 
 wget https://dsvmassets.blob.core.windows.net/mladsfall2018/azureml_train_widgets.tar.gz -O /tmp/azureml_train_widgets.tar.gz
 tar xzf /tmp/azureml_train_widgets.tar.gz -C /usr/local/share/jupyter/nbextensions
@@ -31,7 +34,7 @@ host=`hostname`
 # create users
 # we are skipping this part now that MLADS is over, and most people using this template want
 # to use it with the initial user account
-for i in $(seq 1 30);  do
+for i in $(seq 1 10);  do
   u=`openssl rand -hex 2`;
   # replace 1 with g
   u=`echo $u | sed -e 's/1/g/g'`
